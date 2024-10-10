@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutricionista</title>
+    <title>Consultoria Nutricional</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -22,15 +22,22 @@
             padding: 20px 0;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
-            color: #dfe4e9;
+        h1 {
+            margin: 0;
         }
         nav a {
-            color: #fff;
             margin: 0 15px;
+            color: #fff;
             font-weight: bold;
         }
-        nav a:hover {
+        h2, h3 {
+            color: black;
+        }
+        a {
+            color: #eeeeee;
+            text-decoration: none;
+        }
+        a:hover {
             text-decoration: underline;
         }
         .carousel-item img {
@@ -42,9 +49,6 @@
             background-color: #ffffff;
             padding: 40px 0;
             box-shadow: 0 2px 10px rgba(243, 242, 242, 0.1);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
         }
         #Coleção .col-md-3 {
             border: 2px solid #2196F3;
@@ -58,17 +62,21 @@
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
-        form {
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
         footer {
             background: linear-gradient(to right, #2980b9, #3498db);
             color: white;
             padding: 20px 0;
             margin-top: 20px;
+        }
+        footer h5 {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            background-color: #e74c3c;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #c0392b;
         }
     </style>
 </head>
@@ -144,35 +152,27 @@
 <section class="mb-4">
     <div class="row">
         <div class="col-md-6">
-            <h2>Contato</h2>
-            <form id="contato">
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" class="form-control" id="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea class="form-control" id="mensagem" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+            <section id="contato" class="text-center mb-4">
+                <h2>Contato</h2>
+                <form id="contato-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
                 <div id="resultado-mensagem" class="mt-3"></div>
-            </form>
+            </section>
         </div>
-
-        <div class="col-md-6">
-            <h2>Especialidades</h2>
-            <div class="d-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                <div class="p-3 border bg-primary text-white">Nutrição Clínica</div>
-                <div class="p-3 border bg-primary text-white">Nutrição Esportiva</div>
-                <div class="p-3 border bg-primary text-white">Nutrição Funcional</div>
-                <div class="p-3 border bg-primary text-white">Nutrição Infantil</div>
-            </div>
-        </div>
-    </div>
+        
 </section>
 
 <footer>
@@ -195,19 +195,13 @@
 </footer>
 
 <script>
-    document.getElementById('contato').addEventListener('submit', function(event) {
+    document.getElementById('contato-form').addEventListener('submit', function(event) {
         event.preventDefault();
         const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
         const mensagem = document.getElementById('mensagem').value;
+
         document.getElementById('resultado-mensagem').innerText = `Obrigado, ${nome}! Sua mensagem foi enviada.`;
         this.reset();
-    });
-
-    $(document).ready(function() {
-        $('.carousel').carousel({
-            interval: 5000
-        });
     });
 </script>
 
