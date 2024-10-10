@@ -1,0 +1,139 @@
+/* Estilo global: aplica o modelo de caixa border-box a todos os elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página: define a fonte, margens, preenchimento, altura da linha e cor de fundo */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    line-height: 1.6; /* Define a altura da linha para melhor legibilidade */
+    background-color: #f9f9f9; /* Cor de fundo leve */
+}
+
+/* Estilo do cabeçalho: cor de fundo, cor do texto, preenchimento, alinhamento e sombra */
+header {
+    background: #6ABF45; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    padding: 20px 0; /* Preenchimento vertical */
+    text-align: center; /* Alinhamento do texto ao centro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo da lista de navegação: remove os marcadores e o preenchimento */
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento */
+}
+
+/* Estilo dos itens da lista de navegação: exibe inline e adiciona margem */
+nav ul li {
+    display: inline; /* Exibe itens em linha */
+    margin: 0 15px; /* Margem entre itens */
+}
+
+/* Estilo dos links de navegação: cor, decoração e efeito de transição */
+nav a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+    transition: color 0.3s; /* Transição suave para a cor ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre os links de navegação */
+nav a:hover {
+    color: #FFD700; /* Altera a cor para dourado ao passar o mouse */
+}
+
+/* Estilo das seções: preenchimento, margens, cor de fundo, bordas arredondadas e sombra */
+section {
+    padding: 20px; /* Preenchimento interno */
+    margin: 10px auto; /* Margem vertical e centraliza horizontalmente */
+    background: white; /* Cor de fundo branca */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px; /* Largura máxima */
+}
+
+/* Estilo da grade da galeria: usa grid para layout responsivo */
+.galeria-grid {
+    display: grid; /* Define como grid */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas responsivas */
+    gap: 10px; /* Espaço entre os itens da grid */
+}
+
+/* Estilo das imagens da galeria: largura total e bordas arredondadas */
+.galeria-grid img {
+    width: 100%; /* Imagem ocupa toda a largura do elemento pai */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.3s; /* Transição suave para o efeito de transformação */
+}
+
+/* Efeito ao passar o mouse sobre as imagens da galeria */
+.galeria-grid img:hover {
+    transform: scale(1.05); /* Aumenta a escala da imagem */
+}
+
+/* Estilo do rodapé: alinhamento, preenchimento, cor de fundo e cor do texto */
+footer {
+    text-align: center; /* Alinhamento ao centro */
+    padding: 20px 0; /* Preenchimento vertical */
+    background: #6ABF45; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estilo para citações: margens, preenchimento, cor de fundo, borda e estilo da fonte */
+blockquote {
+    margin: 20px 0; /* Margens verticais */
+    padding: 15px; /* Preenchimento interno */
+    background: #f0f0f0; /* Cor de fundo clara */
+    border-left: 5px solid #6ABF45; /* Borda à esquerda verde */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-style: italic; /* Texto em itálico */
+}
+
+/* Estilo de formulários: layout flexível em coluna */
+form {
+    display: flex; /* Exibe como flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+/* Estilo dos rótulos do formulário: margens */
+label {
+    margin: 10px 0 5px; /* Margens para espaçamento */
+}
+
+/* Estilo dos campos de entrada: preenchimento, borda, bordas arredondadas e transição */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px; /* Preenchimento interno */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s; /* Transição suave para a cor da borda */
+}
+
+/* Efeito de foco nos campos de entrada */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #6ABF45; /* Altera a cor da borda para verde ao focar */
+}
+
+/* Estilo dos botões: cor de fundo, cor do texto, sem borda e efeitos de transição */
+button {
+    background: #6ABF45; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    border: none; /* Remove borda */
+    padding: 10px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background: #5AAE3D; /* Altera a cor de fundo para um verde mais escuro */
+}
