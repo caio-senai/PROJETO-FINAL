@@ -45,12 +45,12 @@
             object-fit: cover;
             border-radius: 8px;
         }
-        #Coleção {
+        #Coleção, #receitas, #exames, #imc {
             background-color: #ffffff;
             padding: 40px 0;
             box-shadow: 0 2px 10px rgba(243, 242, 242, 0.1);
         }
-        #Coleção .col-md-3 {
+        .col-md-3 {
             border: 2px solid #2196F3;
             border-radius: 8px;
             padding: 20px;
@@ -59,14 +59,11 @@
             transition: transform 0.2s, box-shadow 0.2s;
             border: none;
         }
-        #Coleção .col-md-3 a {
-
+        .col-md-3 a {
             color: white;
             text-decoration: none;
         }
-
-
-        #Coleção .col-md-3:hover {
+        .col-md-3:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
         }
@@ -95,9 +92,11 @@
         <h1>Consultoria Nutricional</h1>
         <nav class="d-flex justify-content-center align-items-center">
             <a href="#Coleção">Coleção</a>
-            <a href="#receitas">Receitas</a>
-            <a href="#exames">Exames</a>
-            <a href="#imc">IMC</a>
+            <a href="#Receitas">Receitas</a>
+            <a href="#Exames">Exames</a>
+            <a href="#IMC">IMC</a>
+            <a href="#Produtos">Produtos</a>
+            <a href="#Contato">Contato</a>
             <a href="login.html" class="btn btn-outline-light ml-3">Login e Cadastro</a>
         </nav>
     </div>
@@ -139,18 +138,22 @@
     <h2>Coleções</h2>
     <div class="row">
         <div class="col-md-3">
+            <section id="Produtos" class="text-center mb-4"></section>
             <h3><a href="produtos.html">Produtos</a></h3>
             <p>Conheça nossos produtos saudáveis.</p>
         </div>
         <div class="col-md-3">
+            <section id="Exames" class="text-center mb-4"></section>
             <h3><a href="receitas.html">Receitas</a></h3>
             <p>Receitas deliciosas e saudáveis.</p>
         </div>
         <div class="col-md-3">
+            <section id="Exames" class="text-center mb-4"></section>
             <h3><a href="exames.html">Exames</a></h3>
             <p>Exames para acompanhar sua saúde.</p>
         </div>
         <div class="col-md-3">
+            <section id="IMC" class="text-center mb-4"></section>
             <h3><a href="imc.html">IMC</a></h3>
             <p>Calcule seu IMC aqui.</p>
         </div>
@@ -185,9 +188,21 @@
                 </div>
             </div>
         </div>
+        
+       <!-- Card de Localização -->
+       <div class="col-md-6">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2><b>Localização</b></h2>
+            </div>
+            <div class="card-body">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.407789474426!2d-122.41941528468176!3d37.77492927975977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808e8f2cbd93%3A0x49c1e83c073c84c6!2sPra%C3%A7a%20da%20Sé%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1632628223964!5m2!1spt-BR!2sbr"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
     </div>
-</section>
-
+</div>
 </section>
 
 <footer>
@@ -217,6 +232,16 @@
 
         document.getElementById('resultado-mensagem').innerText = `Obrigado, ${nome}! Sua mensagem foi enviada.`;
         this.reset();
+    });
+
+    // Função de scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 </script>
 
