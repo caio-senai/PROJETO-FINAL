@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Define a codificação de caracteres como UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Define a viewport para responsividade -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
     <title>Consultoria Nutricional</title>
+    <!-- Importa o CSS do Bootstrap para estilização -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Importa o CSS do Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Importa jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Importa Popper.js, necessário para o Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Importa o JavaScript do Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
+        /* Estilização global do body */
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
@@ -16,6 +26,7 @@
             padding: 0;
             background-color: #eef2f3;
         }
+        /* Estilo do cabeçalho */
         header {
             background: linear-gradient(to right, #093049, #093049);
             color: white;
@@ -25,14 +36,17 @@
         h1 {
             margin: 0;
         }
+        /* Estilo dos links de navegação */
         nav a {
             margin: 0 15px;
             color: #fff;
             font-weight: bold;
         }
+        /* Cores dos títulos */
         h2, h3 {
             color: black;
         }
+        /* Estilo dos links */
         a {
             color: #eeeeee;
             text-decoration: none;
@@ -40,16 +54,20 @@
         a:hover {
             text-decoration: underline;
         }
+        /* Estilo das imagens no carrossel */
         .carousel-item img {
             height: 800px;
             object-fit: cover;
             border-radius: 8px;
         }
+        /* Estilo das seções principais */
         #Coleção, #receitas, #exames, #imc {
             background-color: #ffffff;
             padding: 40px 0;
             box-shadow: 0 2px 10px rgba(243, 242, 242, 0.1);
+            margin-top: 20px;
         }
+        /* Estilo das colunas */
         .col-md-3 {
             border: 2px solid #2196F3;
             border-radius: 8px;
@@ -59,29 +77,53 @@
             transition: transform 0.2s, box-shadow 0.2s;
             border: none;
         }
+        /* Estilo dos links nas colunas */
         .col-md-3 a {
             color: white;
             text-decoration: none;
         }
+        /* Efeito ao passar o mouse sobre as colunas */
         .col-md-3:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
         }
+        /* Estilo do rodapé */
         footer {
-            background: linear-gradient(to right, #2980b9, #3498db);
-            color: white;
-            padding: 20px 0;
-            margin-top: 20px;
+            background-color: #2196F3; /* Azul para o fundo do footer */
+            color: white; /* Cor do texto */
+            padding: 20px 0; /* Espaçamento superior e inferior */
+            margin-top: 20px; /* Espaçamento acima do footer */
+            text-align: center;
         }
+        /* Efeito ao passar o mouse sobre links no rodapé */
+        footer p a:hover {
+            color: #ffc107; /* Muda a cor ao passar o mouse */
+        }
+        /* Estilo do cabeçalho dentro do footer */
         footer h5 {
             margin-bottom: 15px;
         }
+        /* Estilo do botão primário */
         .btn-primary {
             background-color: #2196F3;
             border: none;
         }
         .btn-primary:hover {
             background-color: #2195f393;
+        }
+        /* Estilo dos ícones nos formulários */
+        label i {
+            margin-right: 5px; /* Espaço entre ícone e texto */
+            color: #007bff; /* Cor do ícone */
+        }
+        /* Efeito de transição para os cards */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
+        }
+        /* Efeito ao passar o mouse sobre os cards */
+        .card:hover {
+            transform: translateY(-10px); /* Move o card para cima */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
         }
     </style>
 </head>
@@ -91,6 +133,7 @@
     <div class="container">
         <h1>Consultoria Nutricional</h1>
         <nav class="d-flex justify-content-center align-items-center">
+            <!-- Links de navegação -->
             <a href="#Coleção">Coleção</a>
             <a href="#Receitas">Receitas</a>
             <a href="#Exames">Exames</a>
@@ -103,6 +146,7 @@
 </header>
 
 <section id="banner" class="mb-4">
+    <!-- Carrossel de imagens -->
     <div id="carouselExample" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -118,6 +162,7 @@
                 <img src="./Banner 04.jpeg" class="d-block w-100" alt="Banner 4">
             </div>
         </div>
+        <!-- Controles do carrossel -->
         <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Anterior</span>
@@ -131,16 +176,19 @@
 
 <section class="text-center mb-4">
     <h2>Conheça Nosso Trabalho</h2>
+    <!-- Vídeo incorporado -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2RDlDtrnL2I" frameborder="0" allowfullscreen></iframe>
 </section>
 
 <section id="Coleção" class="text-center mb-4">
     <h2>Coleções</h2>
     <div class="row">
+        <!-- Seções de produtos, receitas, exames e IMC -->
         <div class="col-md-3">
             <section id="Produtos" class="text-center mb-4"></section>
             <h3><a href="produtos.html">Produtos</a></h3>
             <p>Conheça nossos produtos saudáveis.</p>
+            <img src="/produtos.jpeg">
         </div>
         <div class="col-md-3">
             <section id="Exames" class="text-center mb-4"></section>
@@ -160,27 +208,27 @@
     </div>
 </section>
 
-<!-- box de contato -->
+<!-- Box de contato -->
 <section class="mb-4">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center">
-                    <h2><b>Contato</b></h2>
+                    <h2><i class="fas fa-envelope"></i> <b>Contato</b></h2> <!-- Ícone de contato -->
                 </div>
                 <div class="card-body">
                     <form id="contato-form">
                         <div class="form-group">
-                            <label for="nome"><b>Nome:</b></label>
+                            <label for="nome"><i class="fas fa-user"></i> <b>Nome:</b></label>
                             <input type="text" class="form-control" id="nome" required>
                         </div>
                         <div class="form-group">
-                            <label for="email"><b>E-mail:</b></label>
+                            <label for="email"><i class="fas fa-envelope"></i> <b>E-mail:</b></label>
                             <input type="email" class="form-control" id="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="mensagem"><b>Mensagem:</b></label>
-                            <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+                            <label for="mensagem"><i class="fas fa-comment"></i> <b>Mensagem:</b></label>
+                            <textarea class="form-control" id="mensagem" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
@@ -188,21 +236,20 @@
                 </div>
             </div>
         </div>
-        
-       <!-- Card de Localização -->
-       <div class="col-md-6">
-        <div class="card">
-            <div class="card-header text-center">
-                <h2><b>Localização</b></h2>
-            </div>
-            <div class="card-body">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.407789474426!2d-122.41941528468176!3d37.77492927975977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808e8f2cbd93%3A0x49c1e83c073c84c6!2sPra%C3%A7a%20da%20Sé%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1632628223964!5m2!1spt-BR!2sbr"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2><span role="img" aria-label="Localização">📍</span> <b>Localização</b></h2> <!-- Emoji de localização -->
+                </div>
+                <div class="card-body">
+                    <!-- Mapa incorporado do Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.407789474426!2d-122.41941528468176!3d37.77492927975977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808e8f2cbd93%3A0x49c1e83c073c84c6!2sPra%C3%A7a%20da%20Sé%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1632628223964!5m2!1spt-BR!2sbr"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </section>
 
 <footer>
@@ -219,27 +266,37 @@
             <div class="col-md-4">
                 <h5>Contato</h5>
                 <p>Email: contato@nutricionista.com</p>
+                <p>
+                    <!-- Ícones de redes sociais -->
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </p>
             </div>
+            <!-- Direitos autorais -->
+            <p>&copy; 2024 Seu Nome ou Nome da Sua Empresa. Todos os direitos reservados.</p>
         </div>
     </div>
 </footer>
 
 <script>
+    // Adiciona um evento ao formulário de contato
     document.getElementById('contato-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const nome = document.getElementById('nome').value;
-        const mensagem = document.getElementById('mensagem').value;
+        event.preventDefault(); // Impede o envio padrão do formulário
+        const nome = document.getElementById('nome').value; // Obtém o nome do usuário
+        const mensagem = document.getElementById('mensagem').value; // Obtém a mensagem do usuário
 
+        // Exibe mensagem de agradecimento
         document.getElementById('resultado-mensagem').innerText = `Obrigado, ${nome}! Sua mensagem foi enviada.`;
-        this.reset();
+        this.reset(); // Limpa o formulário
     });
 
-    // Função de scroll suave
+    // Função de scroll suave para links de âncoras
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Impede o comportamento padrão do link
             document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+                behavior: 'smooth' // Define o comportamento de rolagem
             });
         });
     });
